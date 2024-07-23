@@ -23,13 +23,13 @@ namespace c_sharp_studying_tony
 }
 public class Question1
 {
-    public static void Main(string[] args)
+    public static void Deno(string[] args)
     {
         List<int> grades = new List<int>();
 
         while (true)
         {
-            Console.WriteLine("הזן ציון");
+            Console.WriteLine("Enter grade");
             int grade;
             if (int.TryParse(Console.ReadLine(), out grade))
             {
@@ -52,11 +52,11 @@ public class Question1
         if (count > 0)
         {
             double average = sum / count;
-            Console.WriteLine("ממוצע הציונים הגדולים או שווים ל-70: " + average);
+            Console.WriteLine("The average scores are greater than or equal to 70: " + average);
         }
         else
         {
-            Console.WriteLine("לא הוזנו ציונים גדולים או שווים ל-70.");
+            Console.WriteLine("No scores greater than or equal to 70 were entered.");
         }
     }
 }
@@ -138,3 +138,5 @@ public class Question3
 //קלט: 4
 //פלט : מספר האותיות הגדולות שנקלטו: 0, מספר האותיות הקטנות שנקלטו: 0
 
+
+ 
