@@ -6,5 +6,11 @@ Console.WriteLine("hello Tony");
 
 //Try1.PrintEvens(10);
 
-QuestionIzhar1.Demo();
+//QuestionIzhar1.Demo();
+
+//Question1.Main(args);
+
+//Question2.PrintEvens(1);
+
+//Question3.Main(args);
 
