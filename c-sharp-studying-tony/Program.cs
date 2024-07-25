@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using c_sharp_studying_tony.static_demo;
 using c_sharp_studying_tony;
+using c_sharp_studying_tony.UFC;
 
 Level_1.RunMe();
 
@@ -15,6 +16,8 @@ Level_1.RunMe();
 //Question2.PrintEvens(1);
 
 //Question3.Main(args);
+
+ObjectBasicsDemo.Demo();
 
 
 
