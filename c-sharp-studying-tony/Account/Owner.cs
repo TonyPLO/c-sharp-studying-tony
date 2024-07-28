@@ -11,6 +11,7 @@ namespace c_sharp_studying_tony.Account
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
 
+
         public Owner(string firstName, string lastName)
         {
             FirstName = firstName;
