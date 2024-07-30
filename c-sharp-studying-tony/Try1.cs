@@ -8,6 +8,7 @@ namespace c_sharp_studying_tony
 {
     public class Try1
     {
+        public double x = 23.5;
         public static void PrintEvens(int numMax)
         {
             Console.WriteLine("hello tony");
@@ -20,111 +21,112 @@ namespace c_sharp_studying_tony
             Room.Glass(3);
         }
     }
-}
-public class Question1
-{
-    public static void Deno(string[] args)
+    public class Question
     {
-        List<int> grades = new List<int>();
-
-        while (true)
+        public static void Demno(string[] args)
         {
-            Console.WriteLine("Enter grade");
-            int grade;
-            if (int.TryParse(Console.ReadLine(), out grade))
+            List<int> grades = new List<int>();
+
+            while (true)
             {
-                grades.Add(grade);
+                Console.WriteLine("Enter grade");
+                int grade;
+                if (int.TryParse(Console.ReadLine(), out grade))
+                {
+                    grades.Add(grade);
+                }
             }
-        }
 
-        double sum = 0;
-        int count = 0;
+            double sum = 0;
+            int count = 0;
 
-        foreach (int grade in grades)
-        {
-            if (grade >= 70)
+            foreach (int grade in grades)
             {
-                sum += grade;
-                count++;
+                if (grade >= 70)
+                {
+                    sum += grade;
+                    count++;
+                }
             }
-        }
 
-        if (count > 0)
-        {
-            double average = sum / count;
-            Console.WriteLine("The average scores are greater than or equal to 70: " + average);
-        }
-        else
-        {
-            Console.WriteLine("No scores greater than or equal to 70 were entered.");
-        }
-    }
-}
-// קלט: 90, 85, 70, 60, 50, 40, 
-//פלט : ממוצע הציונים הגדולים או שווים ל-70: 81.67
-//קלט: 75, 80, 95, 100, 
-//פלט : ממוצע הציונים הגדולים או שווים ל-70: 87.5
-//קלט: 50, 65, 60, 55, 
-// פלט: לא הוזנו ציונים גדולים או שווים ל-70
-//קלט: 100, 90, 70, 80, 85, 
-//פלט : ממוצע הציונים הגדולים או שווים ל-70: 85
-//קלט: 70, 71, 72, 73, 74, 
-//פלט : ממוצע הציונים הגדולים או שווים ל-70: 72
-public class Question2
-{
-    public static void PrintEvens(int numMax)
-    {
-        Random random = new Random();
-
-        while (true)
-        {
-            int number = 10 + random.Next(90);
-
-            Console.WriteLine("number was drawn: " + number);
-
-            if (number == 18)
+            if (count > 0)
             {
-                Console.WriteLine("number 18 was drawn. End of the program.");
-                break;
+                double average = sum / count;
+                Console.WriteLine("The average scores are greater than or equal to 70: " + average);
+            }
+            else
+            {
+                Console.WriteLine("No scores greater than or equal to 70 were entered.");
             }
         }
     }
-}
-//וגרל המספר: 37
-//הוגרל המספר: 55
-//הוגרל המספר: 23
-//הוגרל המספר: 18
-//הוגרל המספר 18. סיום התוכנית.
-public class Question3
-{
-    public static void Main(string[] args)
+
+    // קלט: 90, 85, 70, 60, 50, 40, 
+    //פלט : ממוצע הציונים הגדולים או שווים ל-70: 81.67
+    //קלט: 75, 80, 95, 100, 
+    //פלט : ממוצע הציונים הגדולים או שווים ל-70: 87.5
+    //קלט: 50, 65, 60, 55, 
+    // פלט: לא הוזנו ציונים גדולים או שווים ל-70
+    //קלט: 100, 90, 70, 80, 85, 
+    //פלט : ממוצע הציונים הגדולים או שווים ל-70: 85
+    //קלט: 70, 71, 72, 73, 74, 
+    //פלט : ממוצע הציונים הגדולים או שווים ל-70: 72
+    public class Question2
     {
-        int upperCaseCount = 0;
-        int lowerCaseCount = 0;
-
-        while (true)
+        public static void PrintEvens(int numMax)
         {
-            Console.WriteLine("הזן אות באנגלית או ספרה לסיום");
-            string input = Console.ReadLine();
-            char ch = input[0];
+            Random random = new Random();
 
-            if (char.IsDigit(ch))
+            while (true)
             {
-                break;
-            }
+                int number = 10 + random.Next(90);
 
-            if (char.IsUpper(ch))
-            {
-                upperCaseCount++;
-            }
-            else if (char.IsLower(ch))
-            {
-                lowerCaseCount++;
+                Console.WriteLine("number was drawn: " + number);
+
+                if (number == 18)
+                {
+                    Console.WriteLine("number 18 was drawn. End of the program.");
+                    break;
+                }
             }
         }
+    }
+    //וגרל המספר: 37
+    //הוגרל המספר: 55
+    //הוגרל המספר: 23
+    //הוגרל המספר: 18
+    //הוגרל המספר 18. סיום התוכנית.
+    public class Question3
+    {
+        public static void Main(string[] args)
+        {
+            int upperCaseCount = 0;
+            int lowerCaseCount = 0;
 
-        Console.WriteLine("מספר האותיות הגדולות שנקלטו: " + upperCaseCount);
-        Console.WriteLine("מספר האותיות הקטנות שנקלטו: " + lowerCaseCount);
+            while (true)
+            {
+                Console.WriteLine("הזן אות באנגלית או ספרה לסיום");
+                string input = Console.ReadLine();
+                char ch = input[0];
+
+                if (char.IsDigit(ch))
+                {
+                    break;
+                }
+
+                if (char.IsUpper(ch))
+                {
+                    upperCaseCount++;
+                }
+                else if (char.IsLower(ch))
+                {
+                    lowerCaseCount++;
+                }
+            }
+
+            Console.WriteLine("מספר האותיות הגדולות שנקלטו: " + upperCaseCount);
+            Console.WriteLine("מספר האותיות הקטנות שנקלטו: " + lowerCaseCount);
+        }
     }
 }
 //קלט: A, b, C, d, E, 3
@@ -139,4 +141,3 @@ public class Question3
 //פלט : מספר האותיות הגדולות שנקלטו: 0, מספר האותיות הקטנות שנקלטו: 0
 
 
- 

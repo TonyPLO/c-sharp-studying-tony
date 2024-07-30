@@ -13,7 +13,7 @@ using System.Threading.Tasks;
  * - Make internal - public 
  * 
  * */
-namespace c_sharp_studying_tony.Account
+namespace c_sharp_studying_tony.account
 {
     internal class Account
     {

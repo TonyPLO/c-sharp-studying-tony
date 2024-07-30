@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace c_sharp_studying_tony.Account
+namespace c_sharp_studying_tony.account
 {
     public class Owner
     {

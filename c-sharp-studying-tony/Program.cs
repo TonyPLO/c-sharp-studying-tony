@@ -2,8 +2,8 @@
 using c_sharp_studying_tony.static_demo;
 using c_sharp_studying_tony;
 using c_sharp_studying_tony.UFC;
-
-Level_1.RunMe();
+using c_sharp_studying_tony.account;
+//Level_1.RunMe();
 
 //Try1.PrintEvens(1);
 
@@ -11,13 +11,13 @@ Level_1.RunMe();
 
 //QuestionIzhar1.Demo();
 
-//Question1.Demo(args);
+SummerWork.CalculateGradesAverage(args);
 
 //Question2.PrintEvens(1);
 
-//Question3.Main(args);
+//Question3.CaseCount(args);
 
-ObjectBasicsDemo.Demo();
+//ObjectBasicsDemo.Demo();
 
-
+//TestAccount.Test1();
 
