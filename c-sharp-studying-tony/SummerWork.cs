@@ -8,22 +8,17 @@ namespace c_sharp_studying_tony
 {
     public class SummerWork
     {
-        public static void CalculateGradesAverageemo(string[] args)
+        public static void Demo()
+        {
+            CalculateGradesAverageDemo();
+        }
+        public static void CalculateGradesAverageDemo()//Question1
         {
             List<int> grades = new List<int>();
 
             while (true)
             {
-                Console.WriteLine("Enter grade (or type 'exit' to finish):");
-                string input = Console.ReadLine();
-
-                if (input.ToLower() == "exit")
-                {
-                    break;
-                }
-
-                int grade;
-                grade = 0;
+                int grade = Int32.Parse(Console.ReadLine()); 
                 if (int.TryParse(input, out grade))
                 {
                     if (grade >= 0 && grade <= 100)

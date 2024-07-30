@@ -11,7 +11,7 @@ using c_sharp_studying_tony.account;
 
 //QuestionIzhar1.Demo();
 
-SummerWork.CalculateGradesAverage(args);
+//SummerWork.CalculateGradesAverage(args);
 
 //Question2.PrintEvens(1);
 
@@ -20,4 +20,6 @@ SummerWork.CalculateGradesAverage(args);
 //ObjectBasicsDemo.Demo();
 
 //TestAccount.Test1();
+
+SummerWork.Demo();
 
