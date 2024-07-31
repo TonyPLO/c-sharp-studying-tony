@@ -15,20 +15,33 @@ using System.Threading.Tasks;
  * */
 namespace c_sharp_studying_tony.account
 {
-    internal class Account
+    public class Account
     {
-        public Owner owner;//{ get; private set; }
-        public double Balance { get; private set; }
-        public int Overdraft { get; private set; }
+        private Owner owner;
+        private double balance;
+        private int overdraft;
         public const int MAX_OVERDRAFT = 90000;
 
-
-        
         public Account(Owner owner, double balance, int overdraft)
         {
             this.owner = owner;
-            Balance = balance;
-            Overdraft = overdraft > MAX_OVERDRAFT ? MAX_OVERDRAFT : overdraft;
+            this.balance = balance;
+            this.overdraft = overdraft > MAX_OVERDRAFT ? MAX_OVERDRAFT : overdraft;
+        }
+
+        public Owner GetOwner()
+        {
+            return owner;
+        }
+
+        public double GetBalance()
+        {
+            return balance;
+        }
+
+        public int GetOverDraft()
+        {
+            return overdraft;
         }
 
         public void SetOverdraft(int overdraft)
@@ -39,24 +52,24 @@ namespace c_sharp_studying_tony.account
             }
             else
             {
-                Overdraft = overdraft;
+                this.overdraft = overdraft;
             }
         }
 
         public void Deposit(double amount)
         {
-            Balance += amount;
+            balance += amount;
         }
 
         public void Withdraw(double amount)
         {
-            if (Balance - amount < -Overdraft)
+            if (balance - amount < -overdraft)
             {
                 Console.WriteLine("Withdrawal exceeds overdraft limit. Transaction denied.");
             }
             else
             {
-                Balance -= amount;
+                balance -= amount;
             }
         }
     }

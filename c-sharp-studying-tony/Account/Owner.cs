@@ -8,14 +8,23 @@ namespace c_sharp_studying_tony.account
 {
     public class Owner
     {
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-
+        private string firstName;
+        private string lastName;
 
         public Owner(string firstName, string lastName)
         {
-            FirstName = firstName;
-            LastName = lastName;
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+
+        public string GetFirstName()
+        {
+            return firstName;
+        }
+
+        public string GetLastName()
+        {
+            return lastName;
         }
     }
 }
