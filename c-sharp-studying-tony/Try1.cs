@@ -71,7 +71,7 @@ namespace c_sharp_studying_tony
     //פלט : ממוצע הציונים הגדולים או שווים ל-70: 85
     //קלט: 70, 71, 72, 73, 74, 
     //פלט : ממוצע הציונים הגדולים או שווים ל-70: 72
-    public class Question2
+    public class Question2Refactor
     {
         public static void PrintEvens(int numMax)
         {
@@ -96,7 +96,7 @@ namespace c_sharp_studying_tony
     //הוגרל המספר: 23
     //הוגרל המספר: 18
     //הוגרל המספר 18. סיום התוכנית.
-    public class Question3
+    public class Question3Old
     {
         public static void Main(string[] args)
         {
