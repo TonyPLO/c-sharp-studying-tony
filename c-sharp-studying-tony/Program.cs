@@ -4,7 +4,7 @@ using c_sharp_studying_tony;
 using c_sharp_studying_tony.UFC;
 using c_sharp_studying_tony.account;
 using System.Text;
-
+using c_sharp_studying_tony.summer_work;
 
 
 
@@ -26,7 +26,7 @@ using System.Text;
 
 //TestAccount.Test1();
 
-//SummerWork.Demo();
+SummerWork.Demo();
 
-Draft.Demo();
+//Draft.Demo();
 

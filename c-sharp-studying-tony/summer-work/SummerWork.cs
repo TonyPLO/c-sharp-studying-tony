@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace c_sharp_studying_tony
+namespace c_sharp_studying_tony.summer_work
 {
     public class SummerWork
     {
@@ -13,7 +13,11 @@ namespace c_sharp_studying_tony
             //CalculateGradesAverageDemo();//Question 1
             //PrintEvens();//Question 2 
             CaseCount();//Question 3
+            SchoolSystem.Demo();//Question 9
+
         }
+
+
         public static void CalculateGradesAverageDemo()//Question 1
         {
             List<int> grades = new List<int>();
