@@ -3,6 +3,11 @@ using c_sharp_studying_tony.static_demo;
 using c_sharp_studying_tony;
 using c_sharp_studying_tony.UFC;
 using c_sharp_studying_tony.account;
+using System.Text;
+
+
+
+
 //Level_1.RunMe();
 
 //Try1.PrintEvens(1);
@@ -19,7 +24,9 @@ using c_sharp_studying_tony.account;
 
 //ObjectBasicsDemo.Demo();
 
-TestAccount.Test1();
+//TestAccount.Test1();
 
 //SummerWork.Demo();
+
+Draft.Demo();
 
