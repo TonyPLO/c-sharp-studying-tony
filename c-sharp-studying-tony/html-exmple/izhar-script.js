@@ -15,6 +15,10 @@ function addOtherElement() {
     document.body.appendChild(node);
 }
 
+function reactToClick() {
+    console.log("Clicked");
+}
+
 /**
  * 
  * console.log("result = " + result);
