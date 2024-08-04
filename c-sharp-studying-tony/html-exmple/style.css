@@ -6,5 +6,15 @@
 }
 
 #squr1 {
-    
+    font-size: 70px;
+    text-align: center;
+}
+
+#squr1 a {
+    padding: 40px 0;
+    color:green;
+}
+table, tr, td, th {
+    border: solid 2px purple;
+    border-collapse: collapse;
 }
