@@ -14,12 +14,20 @@ namespace c_sharp_studying_tony.summer_work
             {
                 if (reportCard != null && reportCard.IsExcellent())
                 {
-                    Console.WriteLine(reportCard.GetSubName());
+                    Console.WriteLine(reportCard.GetStuName());
                 }
             }
         }
         public static void Demo()
         {
+
+            //test of subjects : 
+            //85 87 86 45 100 - not exellent
+            //85 85 86 - not excellent 
+            // 73, 68, 85, 60, 100 - not excellent 
+            // 100, 100, 100, 54 - not excellent 
+            // 90, 85, 100, 60,90 - excellent
+
             var subjects1 = new Subject[]
             {
             new Subject("Math", 95),
@@ -77,23 +85,26 @@ namespace c_sharp_studying_tony.summer_work
 
     public class ReportCard
     {
-        private string subName;
+        private string stuName;
         private Subject[] subArray;
 
-        public ReportCard(string subName, Subject[] subArray)
+        //Set SubArray
+
+        //TO FIX 
+        public ReportCard(string stuName, Subject[] subArray)
         {
-            this.subName = subName;
+            this.stuName = stuName;
             this.subArray = subArray;
         }
 
-        public string GetSubName()
+        public string GetStuName()
         {
-            return subName;
+            return stuName;
         }
 
-        public void SetSubName(string value)
+        public void SetStuName(string stuName)
         {
-            subName = value;
+            this.stuName = stuName;
         }
 
         public Subject[] GetSubArray()
@@ -101,22 +112,27 @@ namespace c_sharp_studying_tony.summer_work
             return subArray;
         }
 
-        public void SetSubArray(Subject[] value)
+        public void SetSubArray(Subject[] subArray)
         {
-            subArray = value;
+            this.subArray = subArray;
         }
 
+
+        //to fix
         public double Average()
         {
             double total = 0;
             int count = subArray.Length;
-            foreach (var subject in subArray)
+            foreach (var subject in subArray)//convert to regular for
+                //for (int i = 0;... subArray[i]. ....
             {
                 total += subject.GetGrade();
             }
             return total / count;
         }
 
+
+        //to fix 
         public bool IsExcellent()
         {
             return Average() > 90;
