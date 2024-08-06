@@ -12,7 +12,7 @@ namespace c_sharp_studying_tony.summer_work
         {
             //CalculateGradesAverageDemo();//Question 1
             //PrintEvens();//Question 2 
-            CaseCount();//Question 3
+            //CaseCount();//Question 3
             SchoolSystem.Demo();//Question 9
 
         }

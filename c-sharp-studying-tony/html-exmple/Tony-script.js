@@ -15,3 +15,7 @@ document.getElementById('validateButton').addEventListener('click', function () 
     var resultText = number > 100 ? "תקין" : "לא תקין";
     document.getElementById('result').innerText = resultText;
 });
+
+function tonyClick() {
+    console.log("hy");
+}
