@@ -10,46 +10,71 @@ namespace c_sharp_studying_tony.summer_work
     {
         public static void PrintExcellent(ReportCard[] array)
         {
-            foreach (var reportCard in array)
+            for (int i = 0; i < array.Length; i++)
             {
-                if (reportCard != null && reportCard.IsExcellent())
+                if (array[i] != null && array[i].IsExcellent())
                 {
-                    Console.WriteLine(reportCard.GetStuName());
+                    Console.WriteLine(array[i].GetStuName());
                 }
             }
         }
+
         public static void Demo()
         {
-
-            //test of subjects : 
-            //85 87 86 45 100 - not exellent
-            //85 85 86 - not excellent 
-            // 73, 68, 85, 60, 100 - not excellent 
-            // 100, 100, 100, 54 - not excellent 
-            // 90, 85, 100, 60,90 - excellent
-
             var subjects1 = new Subject[]
             {
-            new Subject("Math", 95),
-            new Subject("Science", 89)
+                new Subject("Math", 85),
+                new Subject("Science", 87),
+                new Subject("History", 86),
+                new Subject("Art", 45),
+                new Subject("PE", 100)
             };
 
             var subjects2 = new Subject[]
             {
-            new Subject("Math", 91),
-            new Subject("Science", 92)
+                new Subject("Math", 85),
+                new Subject("Science", 85),
+                new Subject("History", 86)
+            };
+
+            var subjects3 = new Subject[]
+            {
+                new Subject("Math", 73),
+                new Subject("Science", 68),
+                new Subject("History", 85),
+                new Subject("Art", 60),
+                new Subject("PE", 100)
+            };
+
+            var subjects4 = new Subject[]
+            {
+                new Subject("Math", 100),
+                new Subject("Science", 100),
+                new Subject("History", 100),
+                new Subject("Art", 54)
+            };
+
+            var subjects5 = new Subject[]
+            {
+                new Subject("Math", 90),
+                new Subject("Science", 85),
+                new Subject("History", 100),
+                new Subject("Art", 60),
+                new Subject("PE", 90)
             };
 
             var reportCards = new ReportCard[]
             {
-            new ReportCard("Alice", subjects1),
-            new ReportCard("Bob", subjects2)
+                new ReportCard("Alice", subjects1),
+                new ReportCard("Bob", subjects2),
+                new ReportCard("Charlie", subjects3),
+                new ReportCard("David", subjects4),
+                new ReportCard("Eve", subjects5)
             };
 
             PrintExcellent(reportCards);
         }
     }
-
 
     public class Subject
     {
@@ -88,9 +113,6 @@ namespace c_sharp_studying_tony.summer_work
         private string stuName;
         private Subject[] subArray;
 
-        //Set SubArray
-
-        //TO FIX 
         public ReportCard(string stuName, Subject[] subArray)
         {
             this.stuName = stuName;
@@ -117,29 +139,35 @@ namespace c_sharp_studying_tony.summer_work
             this.subArray = subArray;
         }
 
-
-        //to fix
         public double Average()
         {
             double total = 0;
             int count = subArray.Length;
-            foreach (var subject in subArray)//convert to regular for
-                //for (int i = 0;... subArray[i]. ....
+            for (int i = 0; i < count; i++)
             {
-                total += subject.GetGrade();
+                total += subArray[i].GetGrade();
             }
             return total / count;
         }
 
-
-        //to fix 
         public bool IsExcellent()
         {
-            return Average() > 90;
+            bool hasHundred = false;
+            for (int i = 0; i < subArray.Length; i++)
+            {
+                if (subArray[i].GetGrade() < 55)
+                {
+                    return false;
+                }
+                if (subArray[i].GetGrade() == 100)
+                {
+                    hasHundred = true;
+                }
+            }
+            return Average() >= 85 && hasHundred;
         }
     }
 }
-
 
 
 
