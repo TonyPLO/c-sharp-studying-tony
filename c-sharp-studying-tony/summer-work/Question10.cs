@@ -104,6 +104,7 @@ namespace c_sharp_studying_tony.summer_work
         }
 
         //ההנחה שיש מצלמות לכל הערים על פי השאלה
+        //Question 10 ב-2
         public static int LegalCities(CameraInfo[] cameras)
         {
             int count = 0;
@@ -151,6 +152,8 @@ namespace c_sharp_studying_tony.summer_work
         {
             return $"CarInfo:[id = {id}, privateCar= {privateCar}, speed = {speed}]";
         }
+
+        //סעיף א
         public bool Illegal(int maxSpeed)
         {
             return privateCar || speed > maxSpeed;
@@ -172,7 +175,7 @@ namespace c_sharp_studying_tony.summer_work
         public CarInfo[] GetCars() { return cars; }
         public void SetCars(CarInfo[] cars) { this.cars = cars; }
 
-
+        //ב-1
         public bool AllGood()
         {
             for (int i = 0; i < cars.Length; i++)
