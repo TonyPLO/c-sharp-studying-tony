@@ -26,7 +26,9 @@ using c_sharp_studying_tony.summer_work;
 
 //TestAccount.Test1();
 
-SummerWork.Demo();
+//SummerWork.Demo();
+
+ExampleUtils.DemoUtils();
 
 //Draft.Demo();
 
