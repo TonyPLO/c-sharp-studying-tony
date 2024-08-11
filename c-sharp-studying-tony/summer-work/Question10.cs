@@ -45,6 +45,60 @@ namespace c_sharp_studying_tony.summer_work
 
             CameraInfo[] cameras = new CameraInfo[3];
 
+            CameraInfo cameraInfo2 = new CameraInfo();
+            cameraInfo2.SetCity(1);
+            cameraInfo2.SetMaxSpeed(70);
+
+            CameraInfo cameraInfo3 = new CameraInfo();
+            cameraInfo3.SetCity(2);
+            cameraInfo3.SetMaxSpeed(130);
+            CarInfo[] camera1Cars = new CarInfo[7];
+            camera1Cars[0] = carInfo1;
+            camera1Cars[1] = carInfo2;
+
+            for (int i = 2; i < 7; i++)
+            {
+                CarInfo car = new CarInfo();
+                car.SetSpeed(50 + (i - 2) * 10);
+                car.SetId("ID" + (i + 1));
+                car.SetIsPrivate((i - 2) % 2 == 0);
+                camera1Cars[i] = car;
+            }
+            cameraInfo1.SetCars(camera1Cars);
+
+            CarInfo[] camera2Cars = new CarInfo[5];
+            for (int i = 0; i < 5; i++)
+            {
+                CarInfo car = new CarInfo();
+                car.SetSpeed(150 + i * 10);
+                car.SetId("ID" + (i + 7));
+                car.SetIsPrivate(true);
+                camera2Cars[i] = car;
+            }
+            cameraInfo2.SetCars(camera2Cars); 
+
+            CarInfo[] camera3Cars = new CarInfo[5];
+            for (int i = 0; i < 5; i++)
+            {
+                CarInfo car = new CarInfo();
+                car.SetSpeed(70 + i * 10);
+                car.SetId("ID" + (i + 12));
+                car.SetIsPrivate(false);
+                camera3Cars[i] = car;
+            }
+            cameraInfo3.SetCars(camera3Cars);
+
+            Console.WriteLine("cameraInfo1 = " + cameraInfo1);
+            Console.WriteLine(cameraInfo1.AllGood());
+            Console.WriteLine("cameraInfo2 = " + cameraInfo2);
+            Console.WriteLine(cameraInfo2.AllGood());
+            Console.WriteLine("cameraInfo3 = " + cameraInfo3);
+            Console.WriteLine(cameraInfo3.AllGood());
+
+            CameraInfo[] cameras1 = new CameraInfo[3];
+            cameras[0] = cameraInfo1;
+            cameras[1] = cameraInfo2;
+            cameras[2] = cameraInfo3;
 
             Console.WriteLine(LegalCities(cameras));
         }
