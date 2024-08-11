@@ -13,8 +13,8 @@ namespace c_sharp_studying_tony.summer_work
             //CalculateGradesAverageDemo();//Question 1
             //PrintEvens();//Question 2 
             //CaseCount();//Question 3
-            SchoolSystem.Demo();//Question 9
-
+            //SchoolSystem.Demo();//Question 9
+            //CarInfo();//Question 10
         }
 
 
@@ -34,7 +34,7 @@ namespace c_sharp_studying_tony.summer_work
                 {
                     grades.Add(grade);
                 }
-                Console.WriteLine("grade = "+grade);
+                Console.WriteLine("grade = " + grade);
             }
 
             double sum = 0;
@@ -64,8 +64,8 @@ namespace c_sharp_studying_tony.summer_work
 
             while (true)
             {
-                
-                int number = random.Next(10,99);
+
+                int number = random.Next(10, 99);
 
                 Console.WriteLine("number was drawn: " + number);
 
@@ -119,7 +119,70 @@ namespace c_sharp_studying_tony.summer_work
         //פלט : מספר האותיות הגדולות שנקלטו: 3, מספר האותיות הקטנות שנקלטו: 3
         //קלט: 4
         //פלט : מספר האותיות הגדולות שנקלטו: 0, מספר האותיות הקטנות שנקלטו: 0
+        public class CarInfo
+        {
+            private string id;
+            private bool isPrivate;
+            private int speed;
 
+            public string GetId() { return id; }
+            public void SetId(string value) { id = value; }
+
+            public bool GetIsPrivate() { return isPrivate; }
+            public void SetIsPrivate(bool value) { isPrivate = value; }
+
+            public int GetSpeed() { return speed; }
+            public void SetSpeed(int value) { speed = value; }
+
+            internal bool Illegal(int maxSpeed)
+            {
+                return isPrivate || speed > maxSpeed;
+            }
+        }
+
+        public class CameraInfo
+        {
+            private int city;
+            private int maxSpeed;
+            private CarInfo[] cars;
+
+            public int GetCity() { return city; }
+            public void SetCity(int value) { city = value; }
+
+            public int GetMaxSpeed() { return maxSpeed; }
+            public void SetMaxSpeed(int value) { maxSpeed = value; }
+
+            public CarInfo[] GetCars() { return cars; }
+            public void SetCars(CarInfo[] value) { cars = value; }
+
+
+            internal bool AllGood()
+            {
+                for (int i = 0; i < cars.Length; i++)
+                {
+                    if (cars[i] != null && cars[i].Illegal(maxSpeed))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+
+        public static int LegalCities(CameraInfo[] cameras)
+        {
+            HashSet<int> citiesWithNoViolations = new HashSet<int>();
+
+            for (int i = 0; i < cameras.Length; i++)
+            {
+                if (cameras[i].AllGood())
+                {
+                    citiesWithNoViolations.Add(cameras[i].GetCity());
+                }
+            }
+
+            return citiesWithNoViolations.Count;
+        }
     }
 
 }
