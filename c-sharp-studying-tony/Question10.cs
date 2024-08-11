@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,21 +14,21 @@ namespace c_sharp_studying_tony
     public class CarInfo
     {
         private string id;
-        private bool isPrivate;
+        private bool privateCar;
         private int speed;
 
         public string GetId() { return id; }
-        public void SetId(string value) { id = value; }
+        public void SetId(string id) { this.id = id; }
 
-        public bool GetIsPrivate() { return isPrivate; }
-        public void SetIsPrivate(bool value) { isPrivate = value; }
+        public bool GetIsPrivate() { return privateCar; }
+        public void SetIsPrivate(bool privateCar) { this.privateCar = privateCar; }
 
         public int GetSpeed() { return speed; }
-        public void SetSpeed(int value) { speed = value; }
+        public void SetSpeed(int speed) { this.speed = speed; }
 
-        internal bool Illegal(int maxSpeed)
+        public bool Illegal(int maxSpeed)
         {
-            return isPrivate || speed > maxSpeed;
+            return privateCar || speed > maxSpeed;
         }
     }
 
@@ -38,16 +39,16 @@ namespace c_sharp_studying_tony
         private CarInfo[] cars;
 
         public int GetCity() { return city; }
-        public void SetCity(int value) { city = value; }
+        public void SetCity(int city) { this.city = city; }
 
         public int GetMaxSpeed() { return maxSpeed; }
-        public void SetMaxSpeed(int value) { maxSpeed = value; }
+        public void SetMaxSpeed(int maxSpeed) { this.maxSpeed = maxSpeed; }
 
         public CarInfo[] GetCars() { return cars; }
-        public void SetCars(CarInfo[] value) { cars = value; }
+        public void SetCars(CarInfo[] cars) { this.cars = cars; }
 
 
-        internal bool AllGood()
+        public bool AllGood()
         {
             for (int i = 0; i < cars.Length; i++)
             {
@@ -62,17 +63,29 @@ namespace c_sharp_studying_tony
 
         public static int LegalCities(CameraInfo[] cameras)
         {
-            HashSet<int> citiesWithNoViolations = new HashSet<int>();
-
-            for (int i = 0; i < cameras.Length; i++)
+            int count = 0;
+            for (int cityCode = 0; cityCode < 100; cityCode++)
             {
-                if (cameras[i].AllGood())
+                bool allGood = true;
+                
+                for (int j = 0; j < cameras.Length; j++)
                 {
-                    citiesWithNoViolations.Add(cameras[i].GetCity());
+                    if (cityCode == cameras[j].GetCity())
+                    {
+                        if (!cameras[j].AllGood())
+                        {
+                            allGood = false;
+                            break;
+                        }
+                    }
                 }
+                if (allGood)
+                {
+                    count++;
+                }
+                
             }
-
-            return citiesWithNoViolations.Count;
+            return count;
         }
     }
 }
