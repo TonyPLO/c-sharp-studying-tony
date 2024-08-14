@@ -14,9 +14,9 @@ namespace c_sharp_studying_tony.summer_work
             //PrintEvens();//Question 2 
             //CaseCount();//Question 3
             //SchoolSystem.Demo();//Question 9
-            //CarInfo();//Question 10
-
-            Question10.Demo();
+            //Question10.Demo();
+            //testQuestion4();
+            //testQuestion5();
         }
 
 
