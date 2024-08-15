@@ -8,7 +8,7 @@ namespace c_sharp_studying_tony.summer_work
 {
     public class Question6
     {
-        static void testQuestion6()
+        public static void TestQuestion6()
         {
             Console.WriteLine("Insert a string:");
             string input = Console.ReadLine();

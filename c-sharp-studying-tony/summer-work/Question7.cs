@@ -8,7 +8,7 @@ namespace c_sharp_studying_tony.summer_work
 {
     public class Question7
     {
-        bool testQuestion7(int[,] matrix)
+        public static bool TestQuestion7(int[,] matrix)
         {
             int n = matrix.GetLength(0);
 

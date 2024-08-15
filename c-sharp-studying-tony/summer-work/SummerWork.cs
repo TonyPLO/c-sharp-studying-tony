@@ -21,6 +21,20 @@ namespace c_sharp_studying_tony.summer_work
             //testQuestion7();
             //testQuestion8();
 
+
+            //Test question 7
+            //int[,] numbers = { { 2, 1, 5 }, { 6, 7, 3 }, { 0, 8, 0 } };
+
+            //bool b = Question7.TestQuestion7(numbers);
+            //Console.WriteLine("b (should be true)= " + b);
+
+            //int[,] numbers2 = { { 2, 1, 5 }, { 6, 7, 4 }, { 0, 8, 0 } };
+
+            //b = Question7.TestQuestion7(numbers2);
+            //Console.WriteLine("b (should be false)= " + b);
+
+            //Question8.TestQuestion8();
+
         }
 
 

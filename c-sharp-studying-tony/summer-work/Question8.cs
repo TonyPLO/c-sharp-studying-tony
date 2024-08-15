@@ -8,7 +8,7 @@ namespace c_sharp_studying_tony.summer_work
 {
     public class Question8
     {
-        static void testQuestion8()
+       public static void TestQuestion8()
         {
             Console.WriteLine("Enter a passphrase:");
             string input = Console.ReadLine();
@@ -17,7 +17,7 @@ namespace c_sharp_studying_tony.summer_work
             Console.WriteLine(encrypted);
         }
 
-        static string Encrypt(string input)
+        public static string Encrypt(string input)
         {
             StringBuilder result = new StringBuilder();
 

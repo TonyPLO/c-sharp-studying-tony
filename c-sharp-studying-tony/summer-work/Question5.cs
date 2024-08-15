@@ -8,7 +8,7 @@ namespace c_sharp_studying_tony.summer_work
 {
     public class Question5
     {
-        static void testQuestion5()
+        public static void TestQuestion5()
         {
             int count = 0;
             int number = 1;
@@ -28,7 +28,7 @@ namespace c_sharp_studying_tony.summer_work
             }
         }
 
-        static int SumOfDivisors(int n)
+        private static int SumOfDivisors(int n)
         {
             int sum = 0;
             for (int i = 1; i <= n / 2; i++)
