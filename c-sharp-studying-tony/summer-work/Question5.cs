@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace c_sharp_studying_tony.summer_work
 {
-    internal class Question5
+    public class Question5
     {
         static void testQuestion5()
         {

@@ -17,6 +17,10 @@ namespace c_sharp_studying_tony.summer_work
             //Question10.Demo();
             //testQuestion4();
             //testQuestion5();
+            //testQuestion6();
+            //testQuestion7();
+            //testQuestion8();
+
         }
 
 
