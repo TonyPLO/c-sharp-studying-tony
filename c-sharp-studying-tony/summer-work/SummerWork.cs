@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static c_sharp_studying_tony.NumberChecker;
 
 namespace c_sharp_studying_tony.summer_work
 {
@@ -20,10 +21,10 @@ namespace c_sharp_studying_tony.summer_work
             //testQuestion6();
             //testQuestion7();
             //testQuestion8();
-            NumberChecker.Test1();
+            //NumberChecker.Test1();
             //StringValidator.Test2();
             //shapes.Main();
-            //Program.Test();
+            Test3.Test();
 
 
             //Test question 7

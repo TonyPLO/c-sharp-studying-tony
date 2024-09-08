@@ -88,9 +88,9 @@ namespace c_sharp_studying_tony
                 return false;
             }
         }
-        public class Program
+        public class Test3
         {
-            public static void Test3()
+            public static void Test()
             {
                 int[] arr = { -3, 5, -2, 4, -1, 2 };
 
