@@ -15,7 +15,7 @@ namespace c_sharp_studying_tony
 
             while (true)
             {
-                Console.Write("הכנס מספר שלם: ");
+                Console.Write("Enter a whole number: ");
                 int number = int.Parse(Console.ReadLine());
 
                 if (number >= 100 && number <= 999)
