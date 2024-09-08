@@ -23,6 +23,7 @@ namespace c_sharp_studying_tony.summer_work
             NumberChecker.Test1();
             //StringValidator.Test2();
             //shapes.Main();
+            //Program.Test();
 
 
             //Test question 7
