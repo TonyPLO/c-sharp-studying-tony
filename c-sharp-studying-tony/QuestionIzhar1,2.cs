@@ -34,8 +34,8 @@ namespace c_sharp_studying_tony
                 }
             }
 
-            Console.WriteLine($"המספר הגדול ביותר שנקלט: {maxNumber}");
-            Console.WriteLine($"המספר הקטן ביותר שנקלט: {minNumber}");
+            Console.WriteLine($"The largest number received: {maxNumber}");
+            Console.WriteLine($"The smallest number received: {minNumber}");
         }
     }
     internal class StringValidator
